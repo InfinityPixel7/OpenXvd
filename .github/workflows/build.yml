@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: microsoft/setup-msbuild@v2
-      - run: msbuild OpenXVD.sln /p:Configuration=Release /p:Platform=x64
+      - run: msbuild OpenXVD.sln /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143
       - uses: actions/upload-artifact@v4
         with:
           name: OpenXvd-exe
